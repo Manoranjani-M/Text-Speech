@@ -10,7 +10,7 @@
     <div class="box">
         <h1 class="head">Text to Speech</h1>
         <textarea name="" id="textToSpeak" placeholder="Enter text here..."></textarea><br>
-        <button onclick="speakText()"><img src="play.png" alt="▼"><b>Listen</b></button>
+        <button onclick="speakText()"><img src="play.png" alt="▼"><b>speak</b></button>
     </div>
     
     <script>
@@ -19,12 +19,13 @@
     function speakText(){
         var textToSpeak = document.getElementById("textToSpeak").value;
 
-        if(textToSpeak != ''){
+        if(textToSpeak.trim() !== ''){
             speech.text = textToSpeak;
-            // speech.rate =  1;
-            // speech.value = 10
-            // speech.pitch = 2
-            window.speechSysthesis.speak(speech);
+            speech.rate =  1;
+            speech.value = 10;
+            speech.pitch = 2;
+            console.log(speech.text)
+            window.speechSynthesis.speak(speech);
         }
         else{
             alert("Please enter some text.")
