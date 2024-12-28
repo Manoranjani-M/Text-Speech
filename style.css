@@ -41,3 +41,16 @@ button img{
     width: 12px;
     margin-right: 5px;
 }
+@media only screen and (max-width:600px){
+    textarea{
+        width: 250px;
+        height: 150px;
+        margin: 10px 0;
+        padding: 15px;
+        font-size: 16px;
+    }
+    .box{
+        width: 400px;
+        height: fit-content;
+    }
+}
